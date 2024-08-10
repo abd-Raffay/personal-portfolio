@@ -1,6 +1,16 @@
+const express = require("express");
+const router = express.Router();
+const cors = require("cors");
 const nodemailer = require("nodemailer");
 
-// Configure Nodemailer
+// server used to send send emails
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use("/", router);
+app.listen(5000, () => console.log("Server Running"));
+
+
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -17,32 +27,25 @@ contactEmail.verify((error) => {
   }
 });
 
-
-
-module.exports = async (req, res) => {
-  if (req.method === 'POST') {
-    const { firstName, lastName, email, message, phone } = req.body;
-    const name = `${firstName} ${lastName}`;
-    const mail = {
-      from: name,
-      to: "rraffay38@gmail.com",
-      subject: "Contact Form Submission - Portfolio",
-      html: `<p>Name: ${name}</p>
-             <p>Email: ${email}</p>
-             <p>Phone: ${phone}</p>
-             <p>Message: ${message}</p>`,
-    };
-
-    try {
-      await contactEmail.sendMail(mail);
-      res.status(200).json({ status: "Message Sent" });
-    } catch (error) {
-      res.status(500).json({ error: error.message });
+router.post("/contact", (req, res) => {
+  const name = req.body.firstName + req.body.lastName;
+  const email = req.body.email;
+  const message = req.body.message;
+  const phone = req.body.phone;
+  const mail = {
+    from: name,
+    to: "rraffay38@gmail.com",
+    subject: "Contact Form Submission - Portfolio",
+    html: `<p>Name: ${name}</p>
+           <p>Email: ${email}</p>
+           <p>Phone: ${phone}</p>
+           <p>Message: ${message}</p>`,
+  };
+  contactEmail.sendMail(mail, (error) => {
+    if (error) {
+      res.json(error);
+    } else {
+      res.json({ code: 200, status: "Message Sent" });
     }
-  } else {
-    res.setHeader('Allow', ['POST']);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
-  }
-};
-
-
+  });
+});
