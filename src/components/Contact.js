@@ -29,6 +29,7 @@ export const Contact = () => {
     try {
       let response = await fetch("https://nodejs-serverless-function-express-portfolio.vercel.app/api/server", {  // Adjust URL if needed
         method: "POST",
+        mode: 'no-cors',
         headers: {
           "Content-Type": "application/json;charset=utf-8",
         },
