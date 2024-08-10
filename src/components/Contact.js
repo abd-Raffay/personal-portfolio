@@ -27,7 +27,7 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
     try {
-      let response = await fetch("http://localhost:5000/contact", {  // Adjust URL if needed
+      let response = await fetch("https://nodejs-serverless-function-express-portfolio.vercel.app/api/server", {  // Adjust URL if needed
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
