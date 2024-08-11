@@ -27,18 +27,21 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
     try {
-      let response = await fetch("https://nodejs-serverless-function-express-portfolio.vercel.app/api/server", {  // Adjust URL if needed
+      let response = await fetch("https://nodejs-serverless-function-express-portfolio.vercel.app/api/server", {
         method: "POST",
-        
         headers: {
           "Content-Type": "application/json;charset=utf-8",
         },
         body: JSON.stringify(formDetails),
       });
+    
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        //throw new Error(`HTTP error! status: ${response.status}`);
       }
+    
       let result = await response.json();
+      console.log('Data:', result); // Log the response data
+    
       setFormDetails(formInitialDetails);
       if (result.code === 200) {
         setStatus({ success: true, message: 'Message sent successfully' });
@@ -49,6 +52,7 @@ export const Contact = () => {
       console.error('Error:', error);
       setStatus({ success: false, message: 'Something went wrong, please try again later.' });
     }
+    
     setButtonText("Send");
   };
   
