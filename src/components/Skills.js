@@ -4,14 +4,15 @@ import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
 
-import html from "../assets/img/html-1.svg";
-import Firebase from "../assets/img/firebase-1.svg";
-import github from "../assets/img/github-icon-2.svg";
-import figma from "../assets/img/figma-icon.svg"
-import python from "../assets/img/python.svg";
-import angular from "../assets/img/angular.svg";
-import c from "../assets/img/c++.svg";
-import flutter from "../assets/img/flutter.svg";
+import html from "../assets/img/skills-logo/html-1.svg";
+import Firebase from "../assets/img/skills-logo/firebase-1.svg";
+import github from "../assets/img/skills-logo/github-icon-2.svg";
+import figma from "../assets/img/skills-logo/figma-icon.svg"
+import python from "../assets/img/skills-logo/python.svg";
+import angular from "../assets/img/skills-logo/angular.svg";
+import c from "../assets/img/skills-logo/c++.svg";
+import flutter from "../assets/img/skills-logo/flutter.svg";
+import android from "../assets/img/skills-logo/android-6.svg";
 
 export const Skills = () => {
   const responsive = {
@@ -80,6 +81,10 @@ export const Skills = () => {
                             <div className="item">
                                 <img src={figma} alt="Image" />
                                 <h5>Figma</h5>
+                            </div>
+                            <div className="item">
+                                <img src={android} alt="Image" />
+                                <h5>Android</h5>
                             </div>
                             
                         </Carousel>

@@ -1,13 +1,13 @@
 import React from "react";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/proj1-bidcart.png";
-import projImg2 from "../assets/img/proj2-notekeep.png";
-import projImg3 from "../assets/img/proj3-cc.png";
-import projImg4 from "../assets/img/proj4-dashboard.png";
-import projImg5 from "../assets/img/proj5-magzine.png";
-import projImg6 from "../assets/img/proj6-bank.png";
-import projImg7 from "../assets/img/proj7-vendingmachine.png";
+import projImg1 from "../assets/img/project-covers/proj1-bidcart.png";
+import projImg2 from "../assets/img/project-covers/proj2-notekeep.png";
+import projImg3 from "../assets/img/project-covers/proj3-cc.png";
+import projImg4 from "../assets/img/project-covers/proj4-dashboard.png";
+import projImg5 from "../assets/img/project-covers/proj5-magzine.png";
+import projImg6 from "../assets/img/project-covers/proj6-bank.png";
+import projImg7 from "../assets/img/project-covers/proj7-vendingmachine.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -48,13 +48,13 @@ export const Projects = () => {
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Web Development</Nav.Link>
+                        <Nav.Link eventKey="first">Web </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Desktop Development</Nav.Link>
+                        <Nav.Link eventKey="second">Desktop</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Android Development </Nav.Link>
+                        <Nav.Link eventKey="third">Android</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>

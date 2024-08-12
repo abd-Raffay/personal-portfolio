@@ -1,9 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { MailchimpForm } from "./MailchimpForm";
 import logo from "../assets/img/logo.png";
-import linkedinLogo from '../assets/img/linkedin-logo.svg';
-import githubLogo from '../assets/img/github-logo.svg';
-import instagramLogo from '../assets/img/instagram-logo.svg';
+import linkedinLogo from '../assets/img/social-logo/linkedin-logo.svg';
+import githubLogo from '../assets/img/social-logo/github-logo.svg';
+import instagramLogo from '../assets/img/social-logo/instagram-logo.svg';
 
 export const Footer = () => {
   return (
