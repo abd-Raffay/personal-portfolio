@@ -1,11 +1,17 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
+
+import html from "../assets/img/html-1.svg";
+import Firebase from "../assets/img/firebase-1.svg";
+import github from "../assets/img/github-icon-2.svg";
+import figma from "../assets/img/figma-icon.svg"
+import python from "../assets/img/python.svg";
+import angular from "../assets/img/angular.svg";
+import c from "../assets/img/c++.svg";
+import flutter from "../assets/img/flutter.svg";
 
 export const Skills = () => {
   const responsive = {
@@ -44,33 +50,38 @@ export const Skills = () => {
                                handle diverse and challenging projects.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <img src={python} alt="Image" />
+                                <h5>Python</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Android Development</h5>
+                                <img src={angular} alt="Image" />
+                                <h5>Angular</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Logo Design</h5>
+                                <img src={c} alt="Image" />
+                                <h5>C++</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Problem Solving</h5>
+                                <img src={flutter} alt="Image" />
+                                <h5>Flutter</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <img src={Firebase} alt="Image" />
+                                <h5>Firebase</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>UI/UX</h5>
+                                <img src={html} alt="Image" />
+                                <h5>HTML</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Assembly Language</h5>
+                                <img src={github} alt="Image" />
+                                <h5>Github</h5>
                             </div>
+                            <div className="item">
+                                <img src={figma} alt="Image" />
+                                <h5>Figma</h5>
+                            </div>
+                            
                         </Carousel>
                     </div>
                 </div>
