@@ -1,5 +1,14 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { "namespace": "android_app", "package_name": "com.example.readysteadyplug.readysteadyplug_1",
-               "sha256_cert_fingerprints": ["2C:92:21:59:FD:E5:85:94:2D:2D:7F:B5:9D:D4:EB:82:E0:73:41:34:84:F2:BC:F2:B0:A0:F8:CA:D1:37:DF:04"] }
-}]
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.example.readysteadyplug.readysteadyplug_1",
+            "sha256_cert_fingerprints": [
+                "2C:92:21:59:FD:E5:85:94:2D:2D:7F:B5:9D:D4:EB:82:E0:73:41:34:84:F2:BC:F2:B0:A0:F8:CA:D1:37:DF:04"
+            ]
+        }
+    }
+]
